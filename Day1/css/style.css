@@ -1,0 +1,22 @@
+* {
+  font-style: italic;
+}
+
+h3,
+p {
+  color: orange;
+  background-color: blueviolet;
+}
+
+#content1 {
+  background-color: bisque;
+}
+
+.paragraph {
+  font-weight: bold;
+  color: blue;
+}
+
+div > h1 {
+  color: green;
+}
