@@ -2,7 +2,9 @@
   margin: 0px;
   padding: 0px;
 }
-
+body {
+  height: 100vh;
+}
 .box-model1 {
   padding: 20px;
   margin-bottom: 20px;
@@ -115,4 +117,16 @@ article > div {
   position: absolute;
   top: 10rem;
   left: 30%;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+}
+footer div {
+  position: absolute;
+  bottom: 0;
+  background-color: aqua;
+  text-align: center;
+  padding: 10px;
 }
