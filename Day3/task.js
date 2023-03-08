@@ -1,8 +1,14 @@
+// false , '',"",undefined
 const vendingMachine = (email, money, drinkChoice) => {
+    // cek jika money dan emailnya kosong
     if (!email && !money) return "Please check your input";
-    if (!email) return "Sorry can't process it until your email filled";
+    // cek tipe dari input parameter
     if (typeof email !== 'string' || typeof money !== 'number') return "Invalid input";
+    // cek jika emailnya kosong
+    if (!email) return "Sorry can't process it until your email filled";
+    // cek jika moneynya kosong
     if (!money) return "Sorry can't process it until you put your money";
+    
     let price = 0
     switch (drinkChoice) {
         case "Mineral Water":
@@ -20,7 +26,7 @@ const vendingMachine = (email, money, drinkChoice) => {
     if (money < price) {
         result = `Welcome ${email} to May's Vending Machine <br>
         Sorry, insufficient balance we can't process your ${drinkChoice} <br>
-        You need ${5000 - money} more to buy this drink <br>
+        You need ${price - money} more to buy this drink <br>
         Thank you
         `
         return result
@@ -35,4 +41,4 @@ const vendingMachine = (email, money, drinkChoice) => {
     return result
 }
 
-document.getElementById("content").innerHTML = vendingMachine('taufik', 20000, "Cola-COla");
+document.getElementById("content").innerHTML = vendingMachine('taufik@gmail.com', 15000, "Coffee");
